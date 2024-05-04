@@ -139,7 +139,6 @@
 
 <!-- Jquery js-->
 <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-
 <!-- Bootstrap js-->
 <script src="{{ asset('assets/plugins/bootstrap/js/popper.min.js') }}"></script>
 <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap-rtl.js') }}"></script>

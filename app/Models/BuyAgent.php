@@ -13,4 +13,8 @@ class BuyAgent extends Model
     {
         return $this->belongsTo(month::class,"month_id");
     }
+    public function dataBuy()
+    {
+        return $this->hasOne(DataBuy::class, 'buy_id');
+    }
 }

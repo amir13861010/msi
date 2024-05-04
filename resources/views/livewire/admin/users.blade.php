@@ -7,6 +7,7 @@
                     <th>نام کاربر</th>
                     <th>شماره تلفن کاربر</th>
                     <th>سطح کاربر</th>
+                    <th>تعداد سکه</th>
                     <th>تغییر سطح</th>
                     <th>تنظیمات</th>
                 </tr>
@@ -16,6 +17,7 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->phone}}</td>
                         <td>@if($user->status == 0 ) ادمین @elseif($user->status == 1 ) خریدار@else نماینده@endif</td>
+                        <td>@if($user->userInfo != null && $user->userInfo->coins != null)  {{$user->userInfo->coins}} @else - @endif</td>
 
                         <td>
                             <select class="form-control" wire:change="changeRole({{ $user->id }}, $event.target.value)">

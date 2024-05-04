@@ -56,7 +56,10 @@ class Agents extends Component
     {
         return response()->download($licenseUrl);
     }
-
+    public function closeModal()
+    {
+        $this->modalOpen = false;
+    }
     public function render()
     {
         return view('livewire.admin.agents');

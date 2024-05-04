@@ -31,7 +31,8 @@
                     <input class="custom-input" type="text" wire:model="products.{{ $index }}.count"
                            placeholder="تعداد کل"/>
                     <input class="custom-input" type="text" wire:model="products.{{ $index }}.price"
-                            placeholder="مبلغ کل"/>
+                            placeholder="
+                            مبلغ کل(تومان)"/>
 
 
 

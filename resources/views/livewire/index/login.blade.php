@@ -84,7 +84,7 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <p>© 2023 Quotare</p>
+                    <p>© 2024 MSIFARSI</p>
                 </div>
             </div>
             <!-- /Row -->

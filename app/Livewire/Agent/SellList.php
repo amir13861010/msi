@@ -4,6 +4,7 @@ namespace App\Livewire\Agent;
 
 use App\Models\DataSell;
 use App\Models\SellAgent;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class SellList extends Component
@@ -13,7 +14,7 @@ class SellList extends Component
     public $ModalOpen = false;
     public function mount()
     {
-        $this->lists = SellAgent::all();
+        $this->lists = SellAgent::where("agent_id",Auth::getUser()->id)->get();
     }
     public function closeModal()
     {

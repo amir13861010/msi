@@ -51,6 +51,10 @@ class SideBar extends Component
                 // Return default avatar if no matching range found
                 return asset('images/default_avatar.png');
             }
+        }elseif (Auth::getUser()->status == 2)
+        {
+            return asset('images/businessman.png');
+
         }
     }
 

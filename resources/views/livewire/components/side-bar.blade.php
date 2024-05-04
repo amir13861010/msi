@@ -47,6 +47,21 @@
                                 class="fe fe-credit-card sidemenu-icon"></i><span
                                 class="sidemenu-label">سفارشات من</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link with-sub" href="#"><span class="shape1"></span><span class="shape2"></span><i
+                                class="si si-speech sidemenu-icon"></i><span
+                                class="sidemenu-label">تیکت</span><i
+                                class="angle fe fe-chevron-left"></i></a>
+                        <ul class="nav-sub">
+                            <li class="nav-sub-item">
+                                <a class="nav-sub-link" href="{{route("UserAddTicket")}}">افزودن تیکت جدید</a>
+                            </li>
+                            <li class="nav-sub-item">
+                                <a class="nav-sub-link" href="{{route("UserMyTicket")}}">تیکت های من </a>
+                            </li>
+
+
+                        </ul>
 
                 @endcan
                 @can("admin-panel")
@@ -70,10 +85,10 @@
                                 <a class="nav-sub-link" href="{{route("AdminCategory")}}">دسته بندی محصولات </a>
                             </li>
                             <li class="nav-sub-item">
-                                <a class="nav-sub-link" href="{{route("AdminProduct")}}">لیست محصولات </a>
+                                <a class="nav-sub-link" href="{{route("AdminProduct")}}">لیست محصولات MSI</a>
                             </li>
                             <li class="nav-sub-item">
-                                <a class="nav-sub-link" href="{{route("AdminSelledProducts")}}">محصولات ثبت شده</a>
+                                <a class="nav-sub-link" href="{{route("AdminSelledProducts")}}">محصولات ثبت شده کاربر</a>
                             </li>
 
 
@@ -114,51 +129,79 @@
                                     نشده </a>
                             </li>
 
-
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route("AdminAccount")}}"><span class="shape1"></span><span
-                                class="shape2"></span><i
-                                class="mdi mdi-account-edit sidemenu-icon"></i><span
-                                class="sidemenu-label">حساب کاربری</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route("AdminOrders")}}"><span class="shape1"></span><span
-                                class="shape2"></span><i
-                                class="si si-bag sidemenu-icon"></i><span
-                                class="sidemenu-label">سفارشات</span></a>
-                    </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link with-sub" href="#"><span class="shape1"></span><span class="shape2"></span><i
+                                    class="si si-notebook sidemenu-icon"></i><span
+                                    class="sidemenu-label">گزارشات</span><i
+                                    class="angle fe fe-chevron-left"></i></a>
+                            <ul class="nav-sub">
+                                <li class="nav-sub-item">
+                                    <a class="nav-sub-link" href="{{route("AdminBuysAgents")}}">گزارشات خرید </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a class="nav-sub-link" href="{{route("AdminSellsAgents")}}">گزراشات فروش</a>
+                                </li>
+
+
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route("AdminTickets")}}"><span class="shape1"></span><span class="shape2"></span><i
+                                    class="si si-speech sidemenu-icon"></i><span class="sidemenu-label">تیکت ها</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route("AdminAccount")}}"><span class="shape1"></span><span
+                                    class="shape2"></span><i
+                                    class="mdi mdi-account-edit sidemenu-icon"></i><span
+                                    class="sidemenu-label">حساب کاربری</span></a>
+                        </li>
                 @endcan
 
                     @can("agent-panel")
+
                         <li class="nav-item">
-                            <a class="nav-link" href="/agent-panel"><span class="shape1"></span><span class="shape2"></span><i
-                                    class="ti-home sidemenu-icon"></i><span class="sidemenu-label">داشبورد</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('BuyOrder')}}"><span class="shape1"></span><span
-                                    class="shape2"></span><i
+                            <a class="nav-link with-sub" href="#"><span class="shape1"></span><span class="shape2"></span><i
                                     class="mdi mdi-arrow-left-bold sidemenu-icon"></i><span
-                                    class="sidemenu-label">ثبت خرید ماهانه</span></a>
+                                    class="sidemenu-label">خرید ماهانه</span><i
+                                    class="angle fe fe-chevron-left"></i></a>
+                            <ul class="nav-sub">
+                                <li class="nav-sub-item">
+                                    <a class="nav-sub-link" href="{{route('BuyOrder')}}">ثبت خرید ماهانه</a>
+                                </li>
+                                <li class="nav-sub-item">
+
+                                    <a class="nav-sub-link" href="{{route("BuyList")}}">لیست خرید ماهانه </a>
+                                </li>
+
+
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('SellOrder')}}"><span class="shape1"></span><span
-                                    class="shape2"></span><i
-                                    class="mdi mdi-arrow-right-bold sidemenu-icon"></i><span
-                                    class="sidemenu-label">ثبت فروش ماهانه</span></a>
+                            <a class="nav-link with-sub" href="#"><span class="shape1"></span><span class="shape2"></span><i
+                                    class="mdi mdi-arrow-left-bold sidemenu-icon"></i><span
+                                    class="sidemenu-label">فروش ماهانه</span><i
+                                    class="angle fe fe-chevron-left"></i></a>
+                            <ul class="nav-sub">
+                                <li class="nav-sub-item">
+                                    <a class="nav-sub-link" href="{{route('SellOrder')}}">ثبت فروش ماهانه</a>
+                                </li>
+                                <li class="nav-sub-item">
+
+                                    <a class="nav-sub-link" href="{{route("SellList")}}">لیست فروش ماهانه </a>
+                                </li>
+
+
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('BuyList')}}"><span class="shape1"></span><span
+                            <a class="nav-link" href="{{route("AgentAccount")}}"><span class="shape1"></span><span
                                     class="shape2"></span><i
-                                    class="si si-doc sidemenu-icon"></i><span
-                                    class="sidemenu-label">لیست خرید ماهانه</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('SellList')}}"><span class="shape1"></span><span
-                                    class="shape2"></span><i
-                                    class="si si-doc sidemenu-icon"></i><span
-                                    class="sidemenu-label">لیست فروش ماهانه</span></a>
+                                    class="mdi mdi-account-edit sidemenu-icon"></i><span
+                                    class="sidemenu-label">حساب کاربری</span></a>
                         </li>
                     @endcan
 
@@ -253,7 +296,7 @@
                         @if($rating != null)
                             <div style="    top: -0.2rem;
     position: relative;
-    margin-right: 31px;">
+    margin-right: 7px;">
                                 <h3 style="font-size: medium;font-weight: bolder">{{$rating->name}}</h3>
                                 <h6 style="color: red">{{$coins}} سکه</h6>
                             </div>

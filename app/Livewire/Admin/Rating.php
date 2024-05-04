@@ -113,7 +113,6 @@ class Rating extends Component
 
     public function addRating()
     {
-
         $this->validator = Validator::make([
             'name' => $this->ratingName,
             'from' => $this->ratingFrom,

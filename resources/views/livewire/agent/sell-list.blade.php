@@ -19,17 +19,20 @@
                 <tr>
                     <th>نام مدیر</th>
                     <th> ماه سفارش</th>
+                    <th> مبلغ کل</th>
 
                     <th>مشاهده</th>
-
                 </tr>
                 </thead>
                 @foreach($lists as $list)
                     <tr>
                         <td>{{\Illuminate\Support\Facades\Auth::getUser()->name}}</td>
-
                         <td>{{$list->month->name}}</td>
+                        <td>
+                            {{$list->dataSell->sum('price')}}
+                            {{-- نمایش جمع قیمت‌ها --}}
 
+                        </td>
                         <td>
                             <button class="btn btn-primary" wire:click="ShowModal({{$list->id}})">مشاهده بیشتر...
                             </button>
@@ -39,7 +42,6 @@
                 <tbody>
                 </tbody>
             </table>
-
         </div>
     </div>
     @if($ModalOpen)
@@ -53,28 +55,21 @@
                         </button>
                     </div>
                     <div class="modal-body">
-
                         <div class="row">
                             <div class="table-responsive">
                                 <table class="table text-nowrap text-md-nowrap table-bordered mg-b-0">
                                     <thead>
                                     <tr>
-
                                         <th>دسته بندی</th>
                                         <th>تعداد فروش</th>
                                         <th>قیمت کل</th>
-
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($selectedOrder as $seller)
-
                                         <tr>
-
-
                                             <td>{{$seller->category->name}}</td>
                                             <td>{{$seller->count}}</td>
-
                                             <td>{{$seller->price}}</td>
                                         </tr>
                                     @endforeach

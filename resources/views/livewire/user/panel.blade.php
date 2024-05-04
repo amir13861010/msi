@@ -27,7 +27,7 @@
     </style>
     <div class="row row-sm mt-5 mt-lg-3">
         <div class="col-sm-12 col-lg-12 col-xl-12">
-            <div class="card bg-primary custom-card card-box" >
+            <div  style="background-color:black" class="card custom-card card-box" >
                 <div class="card-body p-4">
                     <div class="row align-items-center">
                         <div class="col-xl-8 col-sm-6 col-12 img-bg ">

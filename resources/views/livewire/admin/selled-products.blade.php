@@ -30,6 +30,7 @@
                     <th> شماره همراه کاربر</th>
                     <th> نام دسته</th>
                     <th> امتیاز دریافت شده</th>
+                    <th> تنظمیات</th>
 
                 </tr>
                 </thead>
@@ -41,7 +42,7 @@
                         <td>{{$product->user->phone}}</td>
                         <td>{{$product->product->category->name}}</td>
                         <td>{{$product->product->score}}</td>
-
+                        <td><button class="btn btn-danger" wire:click="Delete({{$product->id}})">حذف</button></td>
                     </tr>
                 @endforeach
 

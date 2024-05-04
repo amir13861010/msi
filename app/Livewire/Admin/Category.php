@@ -25,6 +25,8 @@ class Category extends Component
 
     public function closeModal()
     {
+        $this->categoryName = null;
+        $this->selectedCategoryId = null;
         $this->isModalOpen = false;
     }
 

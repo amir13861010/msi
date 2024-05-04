@@ -8,11 +8,14 @@ use Livewire\Component;
 class Users extends Component
 {
     public $users;
-    public function mount()
-    {
-        $this->users = User::all();
 
+        public function mount()
+    {
+        // Retrieve users with their associated user_info
+        $this->users = User::with('userInfo')->get();
     }
+
+
     public function changeRole($id, $role)
     {
         $user = User::find($id);

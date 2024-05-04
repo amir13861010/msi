@@ -19,6 +19,7 @@
                 <tr>
                     <th>نام مدیر</th>
                     <th> ماه سفارش</th>
+                    <th> مبلغ کل</th>
 
                     <th>مشاهده</th>
 
@@ -29,7 +30,11 @@
                         <td>{{\Illuminate\Support\Facades\Auth::getUser()->name}}</td>
 
                         <td>{{$list->month->name}}</td>
+                        <td>
+                            {{$list->dataBuy->sum('price')}}
+                            {{-- نمایش جمع قیمت‌ها --}}
 
+                        </td>
                         <td>
                             <button class="btn btn-primary" wire:click="ShowModal({{$list->id}})">مشاهده بیشتر...
                             </button>

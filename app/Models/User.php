@@ -47,8 +47,9 @@ class User extends Authenticatable
     ];
     public function userInfo()
     {
-        return $this->belongsTo(UserInfo::class);
+        return $this->hasOne(UserInfo::class, 'user_id');
     }
+
     public function agent()
     {
         return $this->belongsTo(Agent::class, 'agent_id');
