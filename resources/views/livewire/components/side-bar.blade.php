@@ -210,6 +210,15 @@
                             class="shape2"></span><i
                             class="si si-logout sidemenu-icon"></i><span class="sidemenu-label">خروج</span></a>
                 </li>
+                    <div class="container position-relative bottom-0"
+                         style="position: absolute !important;bottom: 3%!important;">
+                        <div class="row row-sm">
+                            <div class="col-md-12">
+                            <span style="color:#fff;font-size: 9px">تمامی حقوق این وب سایت متعلق به <a href="https://msifarsi.com"
+                                                                                                       style="color: #66b500;">MSIFARSI</a> میباشد.</span>
+                            </div>
+                        </div>
+                    </div>
             </ul>
         </div>
     </div>
