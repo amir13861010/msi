@@ -33,6 +33,7 @@ class Agents extends Component
         Technical::where("user_id", $id)->delete();
         // Then delete the user
         $user->delete();
+        $this->redirect(route("AdminAgents"));
     }
     public function ShowDetail($id)
     {

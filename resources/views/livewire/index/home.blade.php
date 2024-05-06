@@ -139,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box">
+            <div class="box" style="cursor:pointer;" onclick="window.location.href='/login';">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 col-sm-12 col-12">
@@ -151,6 +151,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

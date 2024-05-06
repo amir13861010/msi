@@ -13,7 +13,10 @@
         .content-of-input-and-button {
             justify-content: center;
         }
-
+.custom-swal-container
+{
+    width: 90%;
+}
     </style>
     <div class="row row-sm mt-5">
         <div class="col-md-8 col-lg-9">
@@ -107,10 +110,11 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <a class="btn ripple btn-success btn-block" href="#" wire:click="showPurchasableProducts">مشاهده
-                                محصولات قابل خرید</a>
-                            <a class="btn ripple btn-block"  style="background-color: #e52a31;color: white" href="#" wire:click="applyFilter">اعمال
+                            <a class="btn ripple btn-block" style="background-color: #0024ff;color: white" href="#" wire:click="applyFilter">اعمال
                                 فیلتر</a>
+                            <a class="btn ripple btn-success btn-block" href="#" wire:click="showPurchasableProducts">مشاهده
+                                محصولات قابل خرید من</a>
+
                         </div>
                     </div>
                 </div>

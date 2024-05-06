@@ -8,6 +8,22 @@
             margin-bottom: 0.4rem;
             animation: moveUpDown 5s infinite;
         }
+        .btn-custom {
+            background-color: #e52a31;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-custom i {
+            font-size: 1.5rem;
+        }
+
+        .btn-custom span {
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 580px)  {
             .image-card-index
             {
@@ -102,32 +118,36 @@
             </div>
         </div>
     </div>
-    <div class="row row-sm  mt-lg-2">
-
+    <div class="row row-sm mt-lg-2">
         <div class="col-lg-12 col-md-12">
             <div class="card custom-card">
                 <div class="card-body h-100">
                     <div class="mb-3">
-                        <h6 class="main-content-label mb-1">دسترسی سریع </h6>
-
+                        <h6 class="main-content-label mb-1">دسترسی سریع</h6>
                     </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4 col-4 col-sm-4">
-                                <button  class="btn" style="background-color: #e52a31;color: white"> ثبت محصول <i class="si si-basket-loaded"></i></button>
+                                <button class="btn btn-block btn-custom">
+                                    <i class="si si-basket-loaded mb-1"></i>
+                                    <span class="d-block">ثبت محصول</span>
+                                </button>
                             </div>
-                            <div class="col-md-4  col-4 col-sm-4">
-                                <button  class="btn" style="background-color: #e52a31;color: white"style="background-color: #e52a31;color: white"> مشاهده هدایا <i class="si si-present"></i></button>
-
+                            <div class="col-md-4 col-4 col-sm-4">
+                                <button class="btn btn-block btn-custom">
+                                    <i class="si si-present mb-1"></i>
+                                    <span class="d-block">مشاهده هدایا</span>
+                                </button>
                             </div>
-                            <div class="col-md-4  col-4 col-sm-4">
-                                <button  class="btn" style="background-color: #e52a31;color: white"> حساب کاربری <i class="si si-user"></i></button>
-
+                            <div class="col-md-4 col-4 col-sm-4">
+                                <button class="btn btn-block btn-custom">
+                                    <i class="si si-user mb-1"></i>
+                                    <span class="d-block">حساب کاربری</span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

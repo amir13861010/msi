@@ -2,7 +2,7 @@
 
     <div class="main-sidebar main-sidebar-sticky side-menu" style="background:black;">
         <div class="sidemenu-logo">
-            <a class="main-logo" href="https://www.mirrogene.com" target="_blank">
+            <a class="main-logo" href="https://www.msifarsi.com" target="_blank">
                 <img style="width: 152px" src="{{asset("images/MSI-logo-white.png")}}"
                      class="header-brand-img desktop-logo" alt="لوگو">
                 <img style="width:40px;" src="{{asset("images/MSI-logo.png")}}" class="header-brand-img icon-logo"
@@ -62,7 +62,12 @@
 
 
                         </ul>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route("UserMyAccount")}}"><span class="shape1"></span><span
+                                class="shape2"></span><i
+                                class="mdi mdi-account-edit sidemenu-icon"></i><span
+                                class="sidemenu-label">حساب کاربری</span></a>
+                    </li>
                 @endcan
                 @can("admin-panel")
                     <li class="nav-item">
@@ -203,6 +208,21 @@
                                     class="mdi mdi-account-edit sidemenu-icon"></i><span
                                     class="sidemenu-label">حساب کاربری</span></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link with-sub" href="#"><span class="shape1"></span><span class="shape2"></span><i
+                                    class="si si-speech sidemenu-icon"></i><span
+                                    class="sidemenu-label">تیکت</span><i
+                                    class="angle fe fe-chevron-left"></i></a>
+                            <ul class="nav-sub">
+                                <li class="nav-sub-item">
+                                    <a class="nav-sub-link" href="{{route("AgentSendTickets")}}">افزودن تیکت جدید</a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a class="nav-sub-link" href="{{route("AgentTickets")}}">تیکت های من </a>
+                                </li>
+
+
+                            </ul>
                     @endcan
 
                 <li class="nav-item">

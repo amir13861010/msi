@@ -25,6 +25,7 @@ Route::get('/basket', \App\Livewire\User\Basket::class)->name("UserBasket");
 Route::get('/orders', \App\Livewire\User\MyOrders::class)->name("UserOrders");
 Route::get('/add-ticket', \App\Livewire\User\AddTicket::class)->name("UserAddTicket");
 Route::get('/my-ticket', \App\Livewire\User\MyTicket::class)->name("UserMyTicket");
+Route::get('/my-account', \App\Livewire\User\MyAccount::class)->name("UserMyAccount");
 });
 Route::middleware("can:admin-panel")->group(function () {
 
@@ -52,6 +53,8 @@ Route::middleware("can:agent-panel")->group(function () {
     Route::get('/buy-list', \App\Livewire\Agent\BuyList::class)->name('BuyList');
     Route::get('/sell-list', \App\Livewire\Agent\SellList::class)->name('SellList');
     Route::get('/agent-account', \App\Livewire\Agent\EditAccount::class)->name('AgentAccount');
+    Route::get('/agent-tickets', \App\Livewire\Agent\MyTicket::class)->name('AgentTickets');
+    Route::get('/agent-add-ticket', \App\Livewire\Agent\SendTicket::class)->name('AgentSendTickets');
 
 });
 Route::get('/register', \App\Livewire\Index\Register::class)->name("register");

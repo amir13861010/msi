@@ -29,6 +29,10 @@
             /* Add this for rotating the arrow */
             padding-right: 2.5rem; /* Adjust based on the size of the arrow */
         }
+
+
+
+
         .phone
         {
             direction:ltr;
@@ -83,7 +87,8 @@
     <footer>
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-sm-6">
+<div class="col-md-5"></div>
+                <div class="col-sm-6 col-md-6">
                     <p>© 2024 MSIFARSI</p>
                 </div>
             </div>
