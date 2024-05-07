@@ -52,6 +52,10 @@
                                     تایید نماینده
                                 </button>
                             @endif
+                            <button class="btn btn-warning" wire:click="EditAgent({{$user->id}})"
+                                    style="margin-right: 5px;">
+                                ویرایش نماینده <i class="si si-note"></i>
+                            </button>
                             <button class="btn btn-danger" wire:click="daleteAgent({{$user->id}})"
                                     style="margin-right: 5px;">
                                 رد نماینده <i class="si si-trash"></i>
@@ -64,6 +68,38 @@
 
         </div>
     </div>
+    @if($modalEdit)
+        <div class="modal" tabindex="-1" role="dialog" style="display: {{ $modalEdit ? 'block' : 'none' }}">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" aria-label="Close" wire:click="closeModalEdit">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group"
+                             style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px;">
+                            <div class="file-input-container">
+                                <label style="font-weight: bold" class="mb-2">جواز کسب</label>
+                                <input wire:model="license" type="file" name="business_license_file" class="form-control ">
+                            </div>
+                            <div class="file-input-container">
+                                <label style="font-weight: bold" class="mb-2">اساس‌نامه</label>
+                                <input wire:model="statute" type="file" name="articles_of_association_file" class="form-control">
+                            </div>
+                            <div class="file-input-container">
+                                <label style="font-weight: bold" class="mb-2">آگهی تاسیس</label>
+                                <input type="file" wire:model="founded"  name="establishment_announcement_file" class="form-control">
+                            </div>
+                    </div>
+                        <button class="btn btn-success" wire:click="setData">ثبت ویرایشات</button>
+
+                </div>
+            </div>
+        </div>
+    @endif
     @if($modalOpen)
         <div class="modal" tabindex="-1" role="dialog" style="display: {{ $modalOpen ? 'block' : 'none' }}">
             <div class="modal-dialog" role="document">

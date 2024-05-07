@@ -7,14 +7,22 @@ use App\Models\Seller;
 use App\Models\Technical;
 use App\Models\User;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class UnverifiedAgents extends Component
 {
+    use WithFileUploads;
+
     public $users;
     public $modalOpen = false;
+    public $modalEdit = false;
     public $detail;
     public $technical;
     public $sellers;
+    public $EditId;
+    public $license;
+    public $statute;
+    public $founded;
     public function mount()
     {
         $this->users = User::where("status", 2)
@@ -45,6 +53,44 @@ class UnverifiedAgents extends Component
         $this->sellers = Seller::where("user_id",$id)->get();
         $this->technical = Technical::where("user_id",$id)->get();
     }
+    public function EditAgent($id)
+    {
+        $this->modalEdit = true;
+        $this->EditId = $id;
+    }
+    public function closeModalEdit()
+    {
+        $this->modalEdit = false;
+        $this->EditId = null;
+    }
+    public function setData()
+    {
+        // Find the existing agent record
+        $agent = Agent::where("user_id", $this->EditId)->first();
+
+        // Update the attributes if the corresponding file inputs are not empty
+        if ($this->license) {
+            $licence = $this->license->store('license', 'public');
+            $agent->license = $licence;
+        }
+
+        if ($this->statute) {
+            $statute = $this->statute->store('statute', 'public');
+            $agent->statute = $statute;
+        }
+
+        if ($this->founded) {
+            $founded = $this->founded->store('founded', 'public');
+            $agent->founded = $founded;        }
+
+        // Save the changes to the existing agent record
+        $agent->save();
+
+        // Close the modal after updating data
+        $this->modalEdit = false;
+        $this->EditId = null;
+    }
+
     public function acceptAgent($id)
     {
         $affectedRows = Agent::where("user_id", $id)->update(["status" => 1]);

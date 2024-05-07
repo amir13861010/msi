@@ -299,20 +299,20 @@
                         </div>
                     </div>
                 </div>
-                @if(\Illuminate\Support\Facades\Auth::getUser()->status ==1)
-
-                    <a class="nav-link" style="color:black" href="{{route("UserBasket")}}">
-
-                        <div class="dropdown d-md-flex">
-                                           <span style="right: -0.5rem !important;top: -0.5rem !important;"
-                                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{$basket}}
-    <span class="visually-hidden">unread messages</span>
-  </span>
-                            <i style="font-size: larger" class="si si-basket"></i>
-
-                        </div>
+                @if(\Illuminate\Support\Facades\Auth::getUser()->status == 1)
+                    <a class="nav-link" style="color:black" href="{{ route("UserBasket") }}">
+                        <button class="btn btn-primary">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="me-auto">مشاهده سبد خرید</span>
+                                <div class="dropdown d-md-flex">
+                    <span style="right: -0.5rem !important; top: -0.5rem !important;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{$basket}}
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                                    <i style="font-size: larger" class="si si-basket"></i>
+                                </div>
+                            </div>
+                        </button>
                     </a>
-
                     <div class="dropdown d-md-flex">
                         <a class="nav-link icon full-screen-link" href="#">
                             <i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
@@ -320,7 +320,8 @@
                         </a>
                     </div>
                 @endif
-                @if(\Illuminate\Support\Facades\Auth::getUser()->status ==1)
+
+            @if(\Illuminate\Support\Facades\Auth::getUser()->status ==1)
                     <div class="dropdown d-md-flex" style="width: 100px;height: 36px">
                         @if($rating != null)
                             <div style="    top: -0.2rem;
