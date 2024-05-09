@@ -13,7 +13,7 @@
         @livewireStyles
         <style>
             body{
-                font-family: 'IRANYekan', sans-serif;
+                font-family: 'IRANYekan', sans-serif !important;
 
             }
             .background-image {
