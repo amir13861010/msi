@@ -186,8 +186,7 @@ class Gifts extends Component
         $this->openModal();
     }
 
-    public
-    function deleteRating($id)
+    public function deleteRating($id)
     {
         $rating = \App\Models\Gift::findOrFail($id);
 

@@ -24,6 +24,7 @@ class Basket extends Component
     public $selectedCity;
     public $address;
     public $comment;
+    public $postal;
     private $validator;
 
     public function mount()
@@ -142,15 +143,18 @@ class Basket extends Component
             'province' => $this->state,
             'city' => $this->selectedCity,
             'address' => $this->address,
+            'postal' => $this->postal,
 
         ], [
             'province' => ['required'],
             'city' => ['required', 'numeric'],
             'address' => ['required'],
+            'postal' => ['required'],
         ], [
             'province.required' => 'استان وارد نشده است',
             'city.required' => 'شهر وارد نشده است',
             'address.required' => ' آدرس وارد نشده است',
+            'postal.required' => ' کدپستی وارد نشده است',
 
         ]);
         if ($this->validator->fails()) {
@@ -165,6 +169,7 @@ class Basket extends Component
                     "city_id"=>$this->selectedCity,
                     "province_id"=>$this->state,
                     "address"=>$this->address,
+                    "postal"=>$this->postal,
                     "user_id"=>Auth::getUser()->id,
                     "comment"=>$this->comment != null ? $this->comment : null,
                 ]);

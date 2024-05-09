@@ -24,7 +24,13 @@ class SideBar extends Component
         if (Auth::getUser()->status == 1) {
             $coins = UserInfo::where("user_id", Auth::getUser()->id)->first();
             $this->basket = Basket::where("user_id", Auth::getUser()->id)->where("status", 0)->count();
-            $this->coins = $coins->coins;
+            if ($coins && $coins != null)
+            {
+                $this->coins = $coins->coins;
+
+            }else{
+                $this->coins = "-";
+            }
             $this->rating = Rating::where('from', '<=', $this->coins)
                 ->where('to', '>=', $this->coins)
                 ->first();
@@ -62,6 +68,12 @@ class SideBar extends Component
     {
         if (Auth::getUser()->status == 0) {
             $this->redirect(route("AdminAccount"));
+        }
+        elseif (Auth::getUser()->status == 1) {
+            $this->redirect(route("UserMyAccount"));
+        }
+        elseif (Auth::getUser()->status == 2) {
+            $this->redirect(route("AgentAccount"));
         }
     }
 

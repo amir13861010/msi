@@ -66,6 +66,8 @@
                         <hr>
                         <h6> آدرس : <span>{{$selectedOrder->address}}</span></h6>
                         <hr>
+                        <h6> کدپستی : <span>{{$selectedOrder->postal}}</span></h6>
+                        <hr>
                         @if($selectedOrder->comment != null)
                             <h6> توضیحات خریدار : <span>{{$selectedOrder->comment}}</span></h6>
                             <hr>

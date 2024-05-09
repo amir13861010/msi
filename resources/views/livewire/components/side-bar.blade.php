@@ -7,8 +7,8 @@
                      class="header-brand-img desktop-logo" alt="لوگو">
                 <img style="width:40px;" src="{{asset("images/MSI-logo.png")}}" class="header-brand-img icon-logo"
                      alt="لوگو">
-                <img src="assets/img/brand/logo.png" class="header-brand-img desktop-logo theme-logo" alt="لوگو">
-                <img src="assets/img/brand/icon.png" class="header-brand-img icon-logo theme-logo" alt="لوگو">
+                <img src="{{asset("images/MSI-logo-white.png")}}" class="header-brand-img desktop-logo theme-logo" alt="لوگو">
+                <img src="{{asset("images/MSI-logo-white.png")}}" class="header-brand-img icon-logo theme-logo" alt="لوگو">
             </a>
         </div>
         <div class="main-sidebar-body">
@@ -250,9 +250,9 @@
             </div>
             <div class="main-header-center">
                 <div class="responsive-logo">
-                    <a href="index.html"><img src="{{asset("images/Logo-black.png")}}" height="40px" width="130px"
+                    <a href="index.html"><img src="{{asset("images/MSI-logo-01.png")}}"height="30px" width="800px"
                                               class="mobile-logo" alt="لوگو"></a>
-                    <a href="index.html"><img src="{{asset("images/Logo.png")}}" class="mobile-logo-dark"
+                    <a href="index.html"><img src="{{asset("images/MSI-logo-white.png")}}" class="mobile-logo-dark"
                                               alt="لوگو"></a>
                 </div>
 

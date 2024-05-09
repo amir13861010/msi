@@ -117,6 +117,13 @@ class StepFourAgentRegister extends Component
             $user->update([
                 "agent_id"=>$agents->id
             ]);
+            $api = new \Kavenegar\KavenegarApi("7A714345456C49535A5A5A48503157314D5644464775394930357A5433316C7356647956557967464C65303D");
+            $receptor =  $phone;
+            $token2 = "";
+            $token3 = "";
+            $template = "agent-add";
+            $type = "sms";//sms | call
+            $result = $api->VerifyLookup($receptor, "فارسی", $token2, $token3, $template, $type);
         }
         $this->dispatch('swal:modal', title: "موفق", type: "success", text: "ثبت نام با موفقیت انجام شد،پس از تایید ادمین میتوانید وارد حساب خود شوید");
         $this->redirect("/register-agent");

@@ -14,7 +14,7 @@
                                     <input class="form-control " wire:model.live="name" name="name" value="{{$name}}"
                                            placeholder="نام و نام خانوادگی" type="text">
                                     <label for="" class="mt-3">شماره همراه</label>
-                                    <input class="form-control" wire:model.live="phone" value="{{$phone}}"
+                                    <input class="form-control"  disabled value="{{$phone}}"
                                            placeholder="شماره همراه" type="text">
 
                                 </div>

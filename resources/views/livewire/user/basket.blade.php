@@ -157,8 +157,13 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="">شهر</label>
+                            <label class="">آدرس</label>
                             <textarea wire:model="address"  class="form-control"  rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="">کدپستی</label>
+                            <input class="form-control" wire:model="postal"
+                                  type="text">
                         </div>
                         <div class="form-group">
 

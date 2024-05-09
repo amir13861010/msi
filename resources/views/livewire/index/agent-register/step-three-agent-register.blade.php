@@ -1,7 +1,12 @@
 <!-- livewire/step-two-agent-register.blade.php -->
 
 <div>
-
+    <style>
+        label
+        {
+            font-size: 0.7rem;
+        }
+    </style>
     <div class="question_title">
         <h3>اطلاعات فروشنده</h3>
     </div>

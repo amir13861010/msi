@@ -1,4 +1,12 @@
 <div>
+    <style>
+
+        @media (max-width: 700px) {
+            .btn_1 {
+                position: relative;right: 12rem
+            }
+        }
+    </style>
     @if(\Illuminate\Support\Facades\Auth::user() != null)
         {{$this->Getlogin()}}
     @endif
@@ -7,7 +15,6 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-lg-7 col-md-10">
-            {{$token}}
 
             <div class="form-group">
                 <label for="telephone">تلفن همراه</label>

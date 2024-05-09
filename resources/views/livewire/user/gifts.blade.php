@@ -114,6 +114,7 @@
                                 فیلتر</a>
                             <a class="btn ripple btn-success btn-block" href="#" wire:click="showPurchasableProducts">مشاهده
                                 محصولات قابل خرید من</a>
+                            <a class="btn ripple btn-danger btn-block" href="#" wire:click="clearFilters">حذف فیلتر های فعال</a>
 
                         </div>
                     </div>

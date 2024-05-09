@@ -24,7 +24,7 @@ class EditAccount extends Component
 
     public function updated()
     {
-        if ($this->name != Auth::getUser()->name || $this->phone != Auth::getUser()->phone || $this->password != Auth::getUser()->password) {
+        if ($this->name != Auth::getUser()->name || $this->password != Auth::getUser()->password) {
             $this->status = true;
 
         } else {
@@ -50,7 +50,6 @@ class EditAccount extends Component
             } else {
                 $this->user->update([
                     "name" => $this->name,
-                    "phone" => $this->phone,
                     "password" => Hash::make($this->password),
                 ]);
                 $this->status = false;

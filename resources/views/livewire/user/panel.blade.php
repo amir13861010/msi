@@ -8,6 +8,7 @@
             margin-bottom: 0.4rem;
             animation: moveUpDown 5s infinite;
         }
+
         .btn-custom {
             background-color: #e52a31;
             color: white;
@@ -24,9 +25,8 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 580px)  {
-            .image-card-index
-            {
+        @media (max-width: 580px) {
+            .image-card-index {
                 margin-right: 11rem;
                 bottom: 0rem;
             }
@@ -43,7 +43,7 @@
     </style>
     <div class="row row-sm mt-5 mt-lg-3">
         <div class="col-sm-12 col-lg-12 col-xl-12">
-            <div  style="background-color:black" class="card custom-card card-box" >
+            <div style="background-color:black" class="card custom-card card-box">
                 <div class="card-body p-4">
                     <div class="row align-items-center">
                         <div class="col-xl-8 col-sm-6 col-12 img-bg ">
@@ -97,7 +97,8 @@
                                 <div class="card">
                                     <div class="card-body user-card text-center">
                                         <div class="main-img-user avatar-lg online text-center">
-                                            <img alt="آواتار" class="rounded-circle" src="{{ url('storage/' . $gift->image) }}">
+                                            <img alt="آواتار" class="rounded-circle"
+                                                 src="{{ url('storage/' . $gift->image) }}">
                                         </div>
                                         <div class="mt-2">
                                             <h5 class="mb-1">{{$gift->name}}</h5>
@@ -128,22 +129,27 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4 col-4 col-sm-4">
+                                <a href="{{route("UserAddProduct")}}">
                                 <button class="btn btn-block btn-custom">
                                     <i class="si si-basket-loaded mb-1"></i>
                                     <span class="d-block">ثبت محصول</span>
                                 </button>
+                                </a>
                             </div>
                             <div class="col-md-4 col-4 col-sm-4">
+                                <a href="{{route("UserGifts")}}">
                                 <button class="btn btn-block btn-custom">
                                     <i class="si si-present mb-1"></i>
-                                    <span class="d-block">مشاهده هدایا</span>
+                                  <span class="d-block">مشاهده هدایا</span>
                                 </button>
+                                </a>
                             </div>
-                            <div class="col-md-4 col-4 col-sm-4">
-                                <button class="btn btn-block btn-custom">
-                                    <i class="si si-user mb-1"></i>
-                                    <span class="d-block">حساب کاربری</span>
-                                </button>
+                            <div class="col-md-4 col-4 col-sm-4"><a href="{{route("UserMyAccount")}}">
+                                    <button class="btn btn-block btn-custom">
+                                        <i class="si si-user mb-1"></i>
+                                        <span class="d-block">حساب کاربری</span>
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>

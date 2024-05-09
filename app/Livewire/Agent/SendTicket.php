@@ -47,7 +47,7 @@ class SendTicket extends Component
             $ticket->description = $this->description;
             $ticket->save();
             $this->dispatch('swal:modal', title: "موفق", type: "success", text: "با موفقیت ثبت شد");
-            $this->redirect(route("UserAddTicket"));
+            $this->redirect(route("AgentSendTickets"));
 
         }
 

@@ -27,7 +27,16 @@ class LoginForm extends Component
     public function sendSms()
     {
         if ($this->phone != null) {
+            $user = User::where('phone', '=', $this->phone)->first();
+
             $this->token = rand(1000, 9999);
+            $api = new \Kavenegar\KavenegarApi("7A714345456C49535A5A5A48503157314D5644464775394930357A5433316C7356647956557967464C65303D");
+            $receptor =  $user->phone;
+            $token2 = "";
+            $token3 = "";
+            $template = "verify";
+            $type = "sms";//sms | call
+            $result = $api->VerifyLookup($receptor, $this->token, $token2, $token3, $template, $type);
             $this->dispatch('timer',);
             return;
         }

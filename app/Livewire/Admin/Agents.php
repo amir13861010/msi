@@ -45,7 +45,14 @@ class Agents extends Component
     public function acceptAgent($id)
     {
         $affectedRows = Agent::where("user_id", $id)->update(["status" => 1]);
-
+        $agent = User::find($id);
+        $api = new \Kavenegar\KavenegarApi("7A714345456C49535A5A5A48503157314D5644464775394930357A5433316C7356647956557967464C65303D");
+        $receptor =  $agent->phone;
+        $token2 = "";
+        $token3 = "";
+        $template = "verify-agent";
+        $type = "sms";//sms | call
+        $result = $api->VerifyLookup($receptor, "فارسی", $token2, $token3, $template, $type);
         if ($affectedRows > 0) {
             return true; // یعنی حداقل یک رکورد بروزرسانی شده است
         } else {

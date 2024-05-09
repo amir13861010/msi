@@ -24,14 +24,14 @@ public function GetData($value)
 
         if ($this->phone != null)
         {
-//        $api = new \Kavenegar\KavenegarApi("7A714345456C49535A5A5A48503157314D5644464775394930357A5433316C7356647956557967464C65303D");
-//        $receptor =  $this->phone;
+       $api = new \Kavenegar\KavenegarApi("7A714345456C49535A5A5A48503157314D5644464775394930357A5433316C7356647956557967464C65303D");
+       $receptor =  $this->phone;
             $this->token = rand(1000, 9999);
-//        $token2 = "";
-//        $token3 = "";
-//        $template = "verify";
-//        $type = "sms";//sms | call
-//        $result = $api->VerifyLookup($receptor, $this->token, $token2, $token3, $template, $type);
+       $token2 = "";
+       $token3 = "";
+       $template = "verify";
+        $type = "sms";//sms | call
+       $result = $api->VerifyLookup($receptor, $this->token, $token2, $token3, $template, $type);
         }
     }
 
@@ -62,7 +62,14 @@ public function GetData($value)
             Auth::login($user);
 
                 $this->redirect(route("UserPanel"));
-
+            $api = new \Kavenegar\KavenegarApi("7A714345456C49535A5A5A48503157314D5644464775394930357A5433316C7356647956557967464C65303D");
+            $receptor =  $this->phone;
+            $this->token = rand(1000, 9999);
+            $token2 = "";
+            $token3 = "";
+            $template = "user-register";
+            $type = "sms";//sms | call
+            $result = $api->VerifyLookup($receptor, "فارسی", $token2, $token3, $template, $type);
         }elseif ($this->CodeInput == null)
         {
             $this->dispatch('swal:modal', title: "خطا", type: "error", text: "کد تایید وارد نشده است");

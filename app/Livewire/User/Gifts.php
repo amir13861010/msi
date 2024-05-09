@@ -28,6 +28,11 @@ class Gifts extends Component
         $this->quantity = array_fill(0, count($this->gifts), 1);
 
     }
+    public function clearFilters()
+    {
+        $this->reset(['searchText', 'beast', 'category']);
+        $this->showPurchasableProducts(); // Fetch default list of products
+    }
     public function showPurchasableProducts()
     {
 
