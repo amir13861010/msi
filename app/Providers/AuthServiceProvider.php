@@ -24,15 +24,15 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
         Gate::define("admin-panel", function ($user) {
-            return $user->status === 0;
+            return $user->status == 0;
         });
 
         Gate::define("user-panel", function ($user) {
-            return $user->status === 1;
+            return $user->status == 1;
         });
 
         Gate::define("agent-panel", function ($user) {
-            return $user->status === 2;
+            return $user->status == 2;
         });
 
     }

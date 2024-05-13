@@ -38,8 +38,19 @@
                     <tr>
                         <td>{{$product->product->serial}}</td>
                         <td>{{$product->product->name}}</td>
-                        <td>{{$product->user->name}}</td>
-                        <td>{{$product->user->phone}}</td>
+<td>
+            @if($product->user)
+                {{$product->user->name}}
+            @else
+                کاربر حذف شده است
+            @endif
+        </td>                       <td>
+            @if($product->user)
+                {{$product->user->phone}}
+            @else
+                کاربر حذف شده است
+            @endif
+        </td> 
                         <td>{{$product->product->category->name}}</td>
                         <td>{{$product->product->score}}</td>
                         <td><button class="btn btn-danger" wire:click="Delete({{$product->id}})">حذف</button></td>

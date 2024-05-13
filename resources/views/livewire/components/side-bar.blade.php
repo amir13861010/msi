@@ -109,7 +109,7 @@
                                 <a class="nav-sub-link" href="{{route("AdminGifts")}}">افزودن و لیست هدایا </a>
                             </li>
                             <li class="nav-sub-item">
-                                <a class="nav-sub-link" href="">سفارشات </a>
+                                <a class="nav-sub-link" href="{{route("AdminOrders")}}">سفارشات </a>
                             </li>
 
 
@@ -250,7 +250,7 @@
             </div>
             <div class="main-header-center">
                 <div class="responsive-logo">
-                    <a href="index.html"><img src="{{asset("images/MSI-logo-01.png")}}"height="30px" width="800px"
+                    <a href="index.html"><img src="{{asset("images/MSI-logo-01.png")}}"height="30px" width="100px"
                                               class="mobile-logo" alt="لوگو"></a>
                     <a href="index.html"><img src="{{asset("images/MSI-logo-white.png")}}" class="mobile-logo-dark"
                                               alt="لوگو"></a>

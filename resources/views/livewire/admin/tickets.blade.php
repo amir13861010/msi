@@ -12,8 +12,13 @@
                 </thead>
                 @foreach($tickets as $ticket)
                     <tr>
-                        <td>{{$ticket->user->name}}</td>
-                        <td>{{$ticket->title}}</td>
+ <td>
+            @if($ticket->user)
+                {{$ticket->user->name}}
+            @else
+                کاربر حذف شده است
+            @endif
+        </td>                        <td>{{$ticket->title}}</td>
                         <td>
                             <button class="btn btn-warning" wire:click="showTicket({{$ticket->id}})">مشاهده</button>
                         </td>

@@ -8,6 +8,11 @@
             .table-data {
                 margin-top: 40% !important;
             }
+            .p-img
+            {
+                width:80px;
+                height:20px;
+            }
         }
 
         .modal-body {
@@ -36,7 +41,7 @@
                         <td>{{$rating->name}}</td>
                         <td>{{$rating->from}}</td>
                         <td>{{$rating->to}}</td>
-                        <td><img src="{{ url('storage/' . $rating->avatar) }}" alt="Avatar" width="36px" height="36px"></td>
+                        <td><img class="p-img" src="{{ url('storage/' . $rating->avatar) }}" alt="Avatar" width="36px" height="36px"></td>
                         <td>
                             <button class="btn btn-warning" wire:click="editRating({{ $rating->id }})">ویرایش</button>
                             <button class="btn btn-danger" wire:click="deleteRating({{ $rating->id }})">حذف</button>

@@ -30,8 +30,20 @@
                 </thead>
                 @foreach($orders as $order)
                     <tr>
-                        <td>{{$order->user->name}}</td>
-                        <td>{{$order->user->phone}}</td>
+                <td>
+                    @if($order->user)
+                    {{$order->user->name}}
+                    @else
+                         کاربر حذف شده است
+                     @endif
+                 </td>
+                 <td>
+                    @if($order->user)
+                    {{$order->user->phone}}
+                    @else
+                         کاربر حذف شده است
+                     @endif
+                 </td>
                         <td>{{$order->basket->gift->name}}</td>
                         <td>{{$order->basket->quantity}}</td>
                         <td>{{$order->basket->total_coins}}</td>

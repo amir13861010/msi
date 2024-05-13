@@ -3,7 +3,13 @@
 
         @media (max-width: 700px) {
             .btn_1 {
-                position: relative;right: 12rem
+                position: relative;right: 7rem
+            }
+            .custom-swal-container
+            {
+                width:100%;
+                                font-size: xx-small;
+
             }
         }
     </style>
@@ -76,7 +82,7 @@
             @endif
         </div>
     </div>
-    <div id="bottom-wizard">
+    <div id="bottom-wizard" class="mt-4">
         <button type="button" class="btn_1 d-block" wire:click="register">ورود </button>
         <h6 style="display: inline-block;margin-left: 15px;" class="mt-3">حساب کاربری ندارید؟</h6><h6 style="display: inline-block;margin-left: 15px;"><a href="/register-agent">ثبت نام نماینده</a></h6><h6 style="display: inline-block;margin-left: 15px;"><a href="/register">ثبت نام خریدار محصول</a></h6>
     </div>
@@ -96,6 +102,9 @@
                 didOpen: (toast) => {
                     toast.onmouseenter = Swal.stopTimer;
                     toast.onmouseleave = Swal.resumeTimer;
+                },
+                customClass: {
+                    container: 'custom-swal-container' // اعمال کلاس سفارشی برای استایل‌دهی
                 }
             });
             Toast.fire({
