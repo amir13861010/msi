@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Agent;
 
+use App\Models\Seller;
+use App\Models\Technical;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -14,12 +16,28 @@ class EditAccount extends Component
     public $password;
     public $status = false;
     public $user;
+    public $sellers;
+    public $technicals;
     public $passwordConfirmation;
 
     public function mount()
     {
         $this->name = Auth::getUser()->name;
         $this->phone = Auth::getUser()->phone;
+        $this->sellers = Seller::where("user_id",Auth::getUser()->id)->get();
+        $this->technicals = Technical::where("user_id",Auth::getUser()->id)->get();
+    }
+    public function DeleteSeller($id)
+    {
+        $seller = Seller::findOrFail($id);
+        $seller->delete();
+        $this->redirect(route("AgentAccount"));
+    }
+    public function Deletetechnical($id)
+    {
+        $seller = Technical::findOrFail($id);
+        $seller->delete();
+        $this->redirect(route("AgentAccount"));
     }
 
     public function updated()

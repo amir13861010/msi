@@ -3,13 +3,12 @@
 
         @media (max-width: 700px) {
             .btn_1 {
-                position: relative;right: 7rem
+                position: relative;right: 12rem
             }
             .custom-swal-container
             {
-                width:100%;
-                                font-size: xx-small;
-
+                width: 90%;
+                font-size: xx-small;
             }
         }
     </style>

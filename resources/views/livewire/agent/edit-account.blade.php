@@ -14,7 +14,7 @@
                                     <input class="form-control " wire:model.live="name" name="name" value="{{$name}}"
                                            placeholder="نام و نام خانوادگی" type="text">
                                     <label for="" class="mt-3">شماره همراه</label>
-                                    <input class="form-control"  disabled value="{{$phone}}"
+                                    <input class="form-control" disabled value="{{$phone}}"
                                            placeholder="شماره همراه" type="text">
 
                                 </div>
@@ -31,6 +31,53 @@
                             </div>
                         </div>
                     </form>
+                    <div class="mt-3">
+                        <h6 class="main-content-label  mb-1">مسئولان فروش</h6>
+                        <div class="container">
+                            <div class="row">
+                                @foreach($sellers as $seller)
+                                    <div class="col-md-6">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-4"><input class="form-control"
+                                                                             disabled="" value="{{$seller->name}}"
+                                                                             type="text"></div>
+                                                <div class="col-md-4"><input class="form-control"
+                                                                             disabled="" value="{{$seller->phone}}" type="text"></div>
+                                                <div class="col-md-4"><button class="btn btn-danger" wire:click="DeleteSeller({{$seller->id}})">حذف</button></div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <h6 class="main-content-label  mb-1">مسئولان فنی</h6>
+                            <div class="container">
+                                <div class="row">
+                                    @foreach($technicals as $technical)
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-4"><input class="form-control"
+                                                                                 disabled="" value="{{$technical->name}}"
+                                                                                 type="text"></div>
+                                                    <div class="col-md-4"><input class="form-control"
+                                                                                 disabled="" value="{{$technical->phone}}" type="text"></div>
+                                                    <div class="col-md-4"><button class="btn btn-danger" wire:click="Deletetechnical({{$technical->id}})">حذف</button></div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    @endforeach
+                                </div>
+                            </div>
+                    </div>
                 </div>
                 <div class="container">
                     <div class="row">
@@ -40,6 +87,7 @@
                             <button wire:click="updateData" class="btn btn-success {{$status ? "" : "disabled"}} mb-3">
                                 ثبت ویرایش
                             </button>
+
 
                         </div>
                         <div class="col-md-5"></div>

@@ -2,7 +2,6 @@
 
         <div class="question_title">
             <h3>فرم ثبت نام خریدار محصول</h3>
-            {{$token}}
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-7 col-md-10">

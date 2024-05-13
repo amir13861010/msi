@@ -85,6 +85,82 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <div class="card-item-icon card-icon">
+                          <i class="si is si-graph"></i>
+                        </div>
+                        <div class="card-item-title mb-2">
+                            <label class="main-content-label tx-13 font-weight-bold mb-1">تعداد کل فروش نمایندگان </label>
+                        </div>
+                        <div class="card-item-body">
+                            <div class="card-item-stat">
+                                <h4 class="font-weight-bold">{{$AgentsSells}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <div class="card-item-icon card-icon">
+                            <i class="si is si-graph"></i>
+                        </div>
+                        <div class="card-item-title mb-2">
+                            <label class="main-content-label tx-13 font-weight-bold mb-1">مبلغ کل فروش نمایندگان </label>
+                        </div>
+                        <div class="card-item-body">
+                            <div class="card-item-stat">
+                                <h4 class="font-weight-bold">{{$AgentsSellsPrice."  تومان "}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <div class="card-item-icon card-icon">
+                          <i class="si is si-graph"></i>
+                        </div>
+                        <div class="card-item-title mb-2">
+                            <label class="main-content-label tx-13 font-weight-bold mb-1">تعداد کل خرید نمایندگان </label>
+                        </div>
+                        <div class="card-item-body">
+                            <div class="card-item-stat">
+                                <h4 class="font-weight-bold">{{$AgentsBuys}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <div class="card-item-icon card-icon">
+                          <i class="si is si-graph"></i>
+                        </div>
+                        <div class="card-item-title mb-2">
+                            <label class="main-content-label tx-13 font-weight-bold mb-1">مبلغ کل خرید نمایندگان </label>
+                        </div>
+                        <div class="card-item-body">
+                            <div class="card-item-stat">
+                                <h4 class="font-weight-bold">{{$AgentsBuysPrice." تومان "}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
