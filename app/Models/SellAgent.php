@@ -17,5 +17,13 @@ class SellAgent extends Model
     {
         return $this->hasOne(DataSell::class, 'sell_id');
     }
+    public function dataSells()
+    {
+        return $this->hasMany(DataSell::class, 'sell_id', 'agent_id');
+    }
+    public function user()
+    {
+        return $this->hasOne(user::class, 'agent_id');
+    }
 
 }

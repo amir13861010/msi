@@ -12,4 +12,8 @@ class DataSell extends Model
     {
         return $this->belongsTo(Category::class,"category_id");
     }
+    public function sellAgent()
+    {
+        return $this->belongsTo(SellAgent::class, 'sell_id', 'agent_id');
+    }
 }

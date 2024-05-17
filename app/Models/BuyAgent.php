@@ -17,4 +17,12 @@ class BuyAgent extends Model
     {
         return $this->hasOne(DataBuy::class, 'buy_id');
     }
+    public function dataBuys()
+    {
+        return $this->hasMany(DataBuy::class, 'buy_id', 'agent_id');
+    }
+    public function user()
+    {
+        return $this->hasOne(user::class, 'agent_id');
+    }
 }

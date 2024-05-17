@@ -167,7 +167,10 @@
                 @endcan
 
                     @can("agent-panel")
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="/agent-panel"><span class="shape1"></span><span class="shape2"></span><i
+                                    class="ti-home sidemenu-icon"></i><span class="sidemenu-label">داشبورد</span></a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link with-sub" href="#"><span class="shape1"></span><span class="shape2"></span><i
                                     class="mdi mdi-arrow-left-bold sidemenu-icon"></i><span
@@ -202,12 +205,7 @@
 
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route("AgentAccount")}}"><span class="shape1"></span><span
-                                    class="shape2"></span><i
-                                    class="mdi mdi-account-edit sidemenu-icon"></i><span
-                                    class="sidemenu-label">حساب کاربری</span></a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link with-sub" href="#"><span class="shape1"></span><span class="shape2"></span><i
                                     class="si si-speech sidemenu-icon"></i><span
@@ -223,6 +221,13 @@
 
 
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route("AgentAccount")}}"><span class="shape1"></span><span
+                                    class="shape2"></span><i
+                                    class="mdi mdi-account-edit sidemenu-icon"></i><span
+                                    class="sidemenu-label">حساب کاربری</span></a>
+                        </li>
                     @endcan
 
                 <li class="nav-item">

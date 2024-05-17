@@ -36,21 +36,30 @@
                         <td>  @if($user->agent)
                                 {{$user->agent->store}}
                             @else
-                                No Agent Assigned
+                                نماینده یافت نشد
                             @endif</td>
-                        <td>@if($user->agent->status == 0)در انتظار تایید@elseتایید شده @endif</td>
+                        <td>
+                            @if($user->agent)
+                                @if($user->agent->status == 0)در انتظار تایید@elseتایید شده @endif
+                            @else
+                                نماینده یافت نشد
+                            @endif
+                           </td>
 
                         <td>
                             <button class="btn btn-primary" wire:click="ShowDetail({{$user->id}})"
                                     style="margin-right: 5px;">
                                 مشاهده بیشتر
                             </button>
-
+                            @if($user->agent)
                             @if($user->agent->status == 0)
                             <button class="btn btn-success" wire:click="acceptAgent({{$user->id}})"
                                     style="margin-right: 5px;">
                                 تایید نماینده
                             </button>
+                                @else
+                                    نماینده یافت نشد
+                                @endif
                             @endif
                             <button class="btn btn-danger" wire:click="daleteAgent({{$user->id}})"
                                     style="margin-right: 5px;">

@@ -12,4 +12,8 @@ class DataBuy extends Model
     {
         return $this->belongsTo(Category::class,"category_id");
     }
+    public function buyAgent()
+    {
+        return $this->belongsTo(BuyAgent::class, 'buy_id', 'agent_id');
+    }
 }

@@ -26,7 +26,7 @@
                 </thead>
                 @foreach($lists as $list)
                     <tr>
-                        <td>{{\Illuminate\Support\Facades\Auth::getUser()->name}}</td>
+                        <td>{{$list->user->name}}</td>
                         <td>{{$list->month->name}}</td>
                         <td>
                             {{$list->dataSell->sum('price')}}
